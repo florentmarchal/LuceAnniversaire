@@ -1,8 +1,11 @@
 body {
     background-color: #1d1e1e;
-    font-family: "Fire Sans", sans-serif;
+    
 }
 
+.departure-board * {
+    font-family: "Fire Sans", sans-serif;
+}
 h1 {
     color: yellow;
 }

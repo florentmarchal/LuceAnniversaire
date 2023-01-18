@@ -6,6 +6,9 @@ body, html {
     min-height: 100vh;
     font-family: "Open Sans", sans-serif;
 }
+body{
+    margin: 1em;
+}
 
 :root {
     --cover-timing: 0.5s;
@@ -114,7 +117,7 @@ body, html {
         font-size: clamp(1.4em, 1.25vw, 14px);
         line-height: 1.4;
         text-align: justify;
-        margin-top: 0.2em;
+        margin-top: 0.4em;
         margin-bottom: 0;
         justify-content: space-evenly !important;
         display: flex !important;
