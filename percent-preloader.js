@@ -21,13 +21,27 @@ var counting = setInterval(function () {
 				//console.log('fully loaded!');
 				clearInterval(counting);
 				loader.innerHTML = 100;
-				jQuery("body").toggleClass('page-loaded');
-				setTimeout(function() {
-					jQuery('nav').css('visibility', 'visible')
-					setTimeout(function () {
-						startAnimation();
-					}, 500);
+				
+				setTimeout(function () {
+					$("#percent").hide();
+					loader.innerHTML = "GO";
+					$(".percentage").css("opacity","1");
+					$(loader).addClass("clickable");
+					$(loader).click(function () {
+						jQuery("body").toggleClass('page-loaded');
+						startAudio();
+
+						setTimeout(function() {
+							jQuery('nav').css('visibility', 'visible')
+							setTimeout(function () {
+								startAnimation();
+							}, 2000);
+						}, 880);
+					});
+
 				}, 880);
+
+				
 			}
 		}
 	} 

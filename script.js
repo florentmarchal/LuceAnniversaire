@@ -1,4 +1,10 @@
+function startAudio() {
+    var audioElement = $("#audio")[0];
+    audioElement.play();
+}
+
 function startAnimation() {
+    
 
     gsap.registerPlugin(DrawSVGPlugin, MotionPathPlugin);
 
