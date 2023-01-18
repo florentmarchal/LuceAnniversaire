@@ -24,7 +24,9 @@ var counting = setInterval(function () {
 				
 				setTimeout(function () {
 					$("#percent").hide();
-					loader.innerHTML = "GO";
+					loader.innerHTML = "Joyeux anniversaire Luce!";
+					$(loader).prepend('<i class="fa-solid fa-gift m-0"></i><br/>');
+
 					$(".percentage").css("opacity","1");
 					$(loader).addClass("clickable");
 					$(loader).click(function () {
