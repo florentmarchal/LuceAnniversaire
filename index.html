@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>CodePen - Move along path (map) - GSAP 3</title>
+    <link rel="stylesheet" href="./percent-preloader.min.css" />
+    <script src="./jquery.slim.min.js"></script>
+    <script src="./percent-preloader.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./panel.css">
@@ -214,6 +218,13 @@
     <!-- partial:index.partial.html -->
 
     <img id="car" src="./bullet-train.png" alt="car">
+
+    <div class="preloader">
+        <div class="inner">
+            <span class="percentage"><span id="percentage">15</span>%</span>
+        </div>
+        <div class="loader-progress" id="loader-progress"> </div>
+    </div>
 
     <!-- partial -->
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
