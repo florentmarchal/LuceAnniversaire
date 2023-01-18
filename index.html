@@ -6,18 +6,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./panel.css">
+    <link rel="stylesheet" href="./cards.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body style="height:200vh">
     <div class="container-fluid mt-5">
         <div class="row h-100">
-            <div class="col-8">
+            <div class="col-7" style="max-height: 80vh;">
                 <div class='wrapper'>
                     <div class='map'></div>
                     <div class='line'>
                         <svg height='1798' viewBox='0 0 1928 1798' width='1928'>
+                            <style>
+                                .s0 {
+                                    fill: #ff00ff
+                                }
+                            </style>
                             <path id="path" d='M62.40000000000002,1753.2999999999997C73.30000000000001,1756.2999999999997 84.40000000000002,1753.7999999999997 95.40000000000002,1755.1999999999998C100.50000000000001,1755.8999999999996 105.60000000000002,1759.0999999999997 110.70000000000002,1759.7999999999997C119.30000000000003,1761.0999999999997 128.10000000000002,1760.4999999999998 136.60000000000002,1762.0999999999997C151.9,1764.8999999999996 165.4,1772.7999999999997 181.3,1773.0999999999997C195,1773.3999999999999 206,1768.5999999999997 219,1767.4999999999998C228,1766.7999999999997 235.89999999999998,1770.2999999999997 244.7,1770.2999999999997C262.09999999999997,1770.3999999999999 279.9,1767.5999999999997 297.2,1768.4999999999998C318.9,1769.5999999999997 345,1769.2999999999997 366,1775.2999999999997C380.7,1779.4999999999998 394.7,1785.3999999999999 409.8,1788.9999999999998C438.8,1795.7999999999997 475.4,1793.7999999999997 505,1791.9999999999998C515,1791.3999999999999 528.5,1783.6999999999998 540.1,1781.8999999999999C552,1780.1 564.5,1782.6 576.4,1781.6C587.6999999999999,1780.6999999999998 596.1999999999999,1773.8999999999999 606.4,1770.6C620.5,1765.8999999999999 635.2,1766.2 649,1759.8C676.8,1747 702.9,1726.8 732,1716.7C742.3,1713.1 753,1707.6 763.9,1706.3C774.1,1705 784.9,1705.5 794.6,1701.2C804.6,1696.8000000000002 811,1687.3000000000002 820.5,1682.4C829.5,1677.7 839.8000000000001,1679.7 848.6,1673.6000000000001C854.4000000000001,1669.5000000000002 860.0000000000001,1665.6000000000001 865.3000000000001,1660.8000000000002C872.4000000000001,1654.4 875.7,1646.1000000000001 881.7,1638.9C884.3000000000001,1635.8 889.6000000000001,1635.2 892.4000000000001,1631.5C895.8000000000001,1627.1999999999998 895.7,1617.3999999999999 901.3000000000001,1614.6C909.3000000000001,1610.6999999999998 920.1000000000001,1610.3 928.5000000000001,1606.8999999999999C938.9000000000001,1602.7 947.7,1595.7 958.4000000000001,1591.8C966.2,1589 975.6000000000001,1596.8999999999999 983.4000000000001,1593.8C998.6,1587.7 1008.7,1574.1 1022.2,1565.5C1030.5,1560.2 1040.3,1559.1000000000001 1048.7,1554.4C1058.2,1549.1000000000001 1061.8,1538.9 1068.3,1531.1000000000001C1077.7,1519.5 1089.2,1513 1093,1497.2C1094.5,1490.8 1093.6000000000001,1482.9 1094.2,1476.2C1094.7,1471.7 1098,1469.5 1098,1464.8m'></path>
                             <path id="path-p-b" d='m1095.5 1459.6c0-19 20.3-39.4 27.9-57 6.4-14.8 7.2-31.1 14.3-46 5.6-11.7 6.3-27.5 10.9-39.9 11.9-31.8 18.1-58.3 23.2-92 2.8-18.8 18.6-31.7 21.2-50.8 2.4-18.7-2.1-48 3.2-64.3 8.9-27.5 33.6-51.3 37.2-81 2.7-21.5 6-47.3 2.5-68.9-2.3-13.8-13.9-22.3-18.3-35.9-8.1-24.9 0.8-47.4 3.9-71.4 1.2-9.2 0-17.4 3.3-26.2 9.3-24.8 34.2-37.7 49.2-57.9 4.9-6.4 15.7-28.9 20-31.8 6.7-4.5 17.8-6.2 25.5-8.7 31.6-10.4 60.4-4.9 92.6-9 13.5-1.7 27.3-7.8 40.9-9.2 23.9-2.4 50.5-0.1 73.5-8 13.1-4.4 24.7-12.9 38.1-17.7 9.6-3.3 22.1 0 31.1-3.9 5.8-2.4 10.5-7 16.6-8.6'></path>
                             <path id="path-b-a" d='M1616.9999999999998,671.4C1619.3999999999999,666.6 1629.4999999999998,660.5 1632.9999999999998,654C1633.9999999999998,652.1999999999999 1633.3999999999999,650 1634.3999999999999,648.3C1638.2999999999997,641.6999999999999 1642.0999999999997,634.9999999999999 1644.9999999999998,627.6999999999999C1647.8999999999996,620.1 1645.5999999999997,608 1645.5999999999997,599.9C1645.5999999999997,584.9 1646.8999999999999,567.8 1641.4999999999998,553.9C1640.1,550.4 1641.2999999999997,546.4 1640.1999999999998,542.8C1638.6999999999998,538.5 1636.3,536.1999999999999 1634.3999999999999,532.4C1631.1,526 1632,518.7 1628.3,512.5C1626.3999999999999,509.40000000000003 1622.8,505.5 1621.8,502.3m'></path>
@@ -26,93 +33,178 @@
                             <path id="path-b-a-r" d='m1621.8 502.3c1 3.2 4.6 7.1 6.5 10.2 3.7 6.2 2.8 13.5 6.1 19.9 1.9 3.8 4.3 6.1 5.8 10.4 1.1 3.6-0.1 7.6 1.3 11.1 5.4 13.9 4.1 31 4.1 46 0 8.1 2.3 20.2-0.6 27.8-2.9 7.3-6.7 14-10.6 20.6-1 1.7-0.4 3.9-1.4 5.7-3.5 6.5-13.6 12.6-16 17.4'></path>
                             <path id="path-p-b-r" d='M1612.3000000000002,671.3999999999999C1606.2000000000003,672.9999999999999 1601.5000000000002,677.5999999999999 1595.7000000000003,679.9999999999999C1586.7000000000003,683.8999999999999 1574.2000000000003,680.5999999999999 1564.6000000000004,683.8999999999999C1551.2000000000005,688.6999999999999 1539.6000000000004,697.1999999999999 1526.5000000000005,701.5999999999999C1503.5000000000005,709.4999999999999 1476.9000000000005,707.1999999999999 1453.0000000000005,709.5999999999999C1439.4000000000003,711 1425.6000000000004,717.0999999999999 1412.1000000000004,718.8C1379.9000000000005,722.9 1351.1000000000004,717.4 1319.5000000000005,727.8C1311.8000000000004,730.3 1300.7000000000005,732 1294.0000000000005,736.5C1289.7000000000005,739.4 1278.9000000000005,761.9 1274.0000000000005,768.3C1259.0000000000005,788.4999999999999 1234.1000000000004,801.4 1224.8000000000004,826.1999999999999C1221.5000000000005,835 1222.7000000000005,843.1999999999999 1221.5000000000005,852.4C1218.4000000000003,876.4 1209.5000000000005,898.9 1217.6000000000004,923.8C1222.0000000000002,937.4 1233.6000000000004,945.9 1235.9000000000003,959.6999999999999C1239.4000000000003,981.3 1236.1000000000004,1007.0999999999999 1233.4000000000003,1028.6C1229.8000000000002,1058.3 1205.1000000000004,1082.1 1196.2000000000003,1109.6C1190.9000000000003,1125.8999999999999 1195.4000000000003,1155.1999999999998 1193.0000000000002,1173.8999999999999C1190.4,1192.9999999999998 1174.6000000000001,1205.8999999999999 1171.8000000000002,1224.6999999999998C1166.7,1258.3999999999999 1160.5000000000002,1284.8999999999999 1148.6000000000001,1316.6999999999998C1144,1329.1 1143.3,1344.8999999999999 1137.7,1356.6C1130.6000000000001,1371.5 1129.8000000000002,1387.8 1123.4,1402.6C1115.8,1420.1999999999998 1095.5,1440.6 1095.5,1459.6m'></path>
                             <path id="path-p-r-r" d='m1098 1464.8c0 4.7-3.3 6.9-3.8 11.4-0.6 6.7 0.3 14.6-1.2 21-3.8 15.8-15.3 22.3-24.7 33.9-6.5 7.8-10.1 18-19.6 23.3-8.4 4.7-18.2 5.8-26.5 11.1-13.5 8.6-23.6 22.2-38.8 28.3-7.8 3.1-17.2-4.8-25-2-10.7 3.9-19.5 10.9-29.9 15.1-8.4 3.4-19.2 3.8-27.2 7.7-5.6 2.8-5.5 12.6-8.9 16.9-2.8 3.7-8.1 4.3-10.7 7.4-6 7.2-9.3 15.5-16.4 21.9-5.3 4.8-10.9 8.7-16.7 12.8-8.8 6.1-19.1 4.1-28.1 8.8-9.5 4.9-15.9 14.4-25.9 18.8-9.7 4.3-20.5 3.8-30.7 5.1-10.9 1.3-21.6 6.8-31.9 10.4-29.1 10.1-55.2 30.3-83 43.1-13.8 6.4-28.5 6.1-42.6 10.8-10.2 3.3-18.7 10.1-30 11-11.9 1-24.4-1.5-36.3 0.3-11.6 1.8-25.1 9.5-35.1 10.1-29.6 1.8-66.2 3.8-95.2-3-15.1-3.6-29.1-9.5-43.8-13.7-21-6-47.1-5.7-68.8-6.8-17.3-0.9-35.1 1.9-52.5 1.8-8.8 0-16.7-3.5-25.7-2.8-13 1.1-24 5.9-37.7 5.6-15.9-0.3-29.4-8.2-44.7-11-8.5-1.6-17.3-1-25.9-2.3-5.1-0.7-10.2-3.9-15.3-4.6-11-1.4-22.1 1.1-33-1.9'></path>
+                            <path id="paris-dot" class="s0" d="m1099 1472c-3.3 0-6-2.7-6-6 0-3.3 2.7-6 6-6 3.3 0 6 2.7 6 6 0 3.3-2.7 6-6 6z" />
+                            <path id="anvers-dot" class="s0" d="m1626 522c-2.8 0-5-2.2-5-5 0-2.8 2.2-5 5-5 2.8 0 5 2.2 5 5 0 2.8-2.2 5-5 5z" />
+                            <path id="amsterdam-dot" class="s0" d="m1754.5 46c-3 0-5.5-2.5-5.5-5.5 0-3 2.5-5.5 5.5-5.5 3 0 5.5 2.5 5.5 5.5 0 3-2.5 5.5-5.5 5.5z" />
+                            <path id="brussels-dot" class="s0" d="m1613 676c-3.3 0-6-2.7-6-6 0-3.3 2.7-6 6-6 3.3 0 6 2.7 6 6 0 3.3-2.7 6-6 6z" />
                         </svg>
                     </div>
                 </div>
 
             </div>
-            <div class="col-4">
+            <div class="col-5" style="height:200vh">
                 <h1>
                     <i class="fas fa-plane-departure">
                         <img src="./bullet-train.png" alt="car">
                     </i>
                     Departures
                 </h1>
-                <div class="d-none RNSPAR">
-                    <span class="letter letter-2"></span>
-                    <span class="letter letter-6"></span>
-                    <span class="letter letter-slash"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-N"></span>
-                    <span class="letter letter-S"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-P"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-R"></span>
+
+                <div class="w-100 text-center">
+                    <div class="d-none RNSPAR">
+                        <span class="letter letter-2"></span>
+                        <span class="letter letter-6"></span>
+                        <span class="letter letter-slash"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-N"></span>
+                        <span class="letter letter-S"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-P"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-R"></span>
+                    </div>
+                    <div class="d-none PARAMS mt-1">
+                        <span class="letter letter-2"></span>
+                        <span class="letter letter-7"></span>
+                        <span class="letter letter-slash"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-P"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-M"></span>
+                        <span class="letter letter-S"></span>
+                    </div>
+                    <div class="d-none AMSANR mt-1">
+                        <span class="letter letter-3"></span>
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-slash"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-M"></span>
+                        <span class="letter letter-S"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-N"></span>
+                        <span class="letter letter-R"></span>
+                    </div>
+                    <div class="d-none ANRBRU mt-1">
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-slash"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-A"></span>
+                        <span class="letter letter-N"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-B"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-U"></span>
+                    </div>
+                    <div class="d-none BRURNS mt-1">
+                        <span class="letter letter-0"></span>
+                        <span class="letter letter-4"></span>
+                        <span class="letter letter-slash"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-1"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-B"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-U"></span>
+                        <span class="letter letter-blank"></span>
+                        <span class="letter letter-R"></span>
+                        <span class="letter letter-N"></span>
+                        <span class="letter letter-S"></span>
+                    </div>
                 </div>
-                <div class="d-none PARAMS mt-1">
-                    <span class="letter letter-2"></span>
-                    <span class="letter letter-7"></span>
-                    <span class="letter letter-slash"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-P"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-M"></span>
-                    <span class="letter letter-S"></span>
+                <div id="parisdiv" class="card infos">
+                    <h2><span class="badge">Paris</span></h2>
+                    <img src="https://www.bikeme.eu/wp-content/uploads/2018/12/gargoyles-notre-dame-cathedral_79eef6bdc5204bfa.jpg" alt="Fjordur - Ark Survival Evolved" />
+                    <div class="text">
+                        <p>
+                            Une simple escale
+                        </p>
+                        <p>Hotel encore à définir</p>
+                    </div>
                 </div>
-                <div class="d-none AMSANR mt-1">
-                    <span class="letter letter-3"></span>
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-slash"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-M"></span>
-                    <span class="letter letter-S"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-N"></span>
-                    <span class="letter letter-R"></span>
+                <div id="amsterdamdiv" class="card infos">
+                    <h2><span class="badge">Amsterdam</span></h2>
+                    <img src="https://cdn.britannica.com/30/180130-138-4FC01CDD/Overview-Amsterdam.jpg?w=800&h=450&c=crop" alt="Fjordur - Ark Survival Evolved" />
+                    <div class="text">
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/4bf01495-fc4b-47ac-b0e6-ef5d2ff104cd.jpg?im_w=720" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/6474026?adults=2&check_in=2023-10-22&check_out=2023-10-25&source_impression_id=p3_1672818365_K1J40wIggZT%2BvPNb">
+                                Suite spacieuse et luxueuse Jordaan
+                            </a>
+                        </p>
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/bf6bcc42-49d4-4a76-b18f-2f9d1d4b6be9.jpg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/11559431?adults=2&location=Amsterdam%2C%20Pays-Bas&check_in=2023-10-22&check_out=2023-10-25&federated_search_id=5e413e1d-808b-4c56-9e20-1eb09608b1d3&source_impression_id=p3_1672856513_TLnXQWfGeiMBZ4Jd">
+                                Appartement Amstel River Garden
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="d-none ANRBRU mt-1">
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-slash"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-A"></span>
-                    <span class="letter letter-N"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-B"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-U"></span>
+                <div id="anversdiv" class="card infos">
+                    <h2><span class="badge">Anvers</span></h2>
+                    <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/504000/504146-antwerp-market-square-grote-markt.jpg" alt="Fjordur - Ark Survival Evolved" />
+                    <div class="text">
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/66f4c8cc-622e-4411-b373-4794146431dd.jpg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/35779920?adults=2&check_in=2023-10-30&check_out=2023-11-01&source_impression_id=p3_1672858601_TgbTO5oRR2S7v2Td">
+                                Appartement spacieux et moderne dans le centre d'Anvers
+                            </a>
+                        </p>
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-734667707057877756/original/f35ad02c-647d-4dde-af98-cbf2b2e888f1.jpeg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/734667707057877756?adults=2&check_in=2023-10-30&check_out=2023-11-01&source_impression_id=p3_1673115397_rqaHRN3Dgdc6tTyA">
+                                Appartement sur la place de l'Opéra au cœur d'Anvers 702
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="d-none BRURNS mt-1">
-                    <span class="letter letter-0"></span>
-                    <span class="letter letter-4"></span>
-                    <span class="letter letter-slash"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-1"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-B"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-U"></span>
-                    <span class="letter letter-blank"></span>
-                    <span class="letter letter-R"></span>
-                    <span class="letter letter-N"></span>
-                    <span class="letter letter-S"></span>
+                <div id="brusselsdiv" class="card infos">
+                    <h2><span class="badge">Bruxelles</span></h2>
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/71/a8/a1.jpg" alt="Fjordur - Ark Survival Evolved" />
+                    <div class="text">
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/0b17ddce-1436-4848-9361-8ed6b8a73169.jpg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/36404006?adults=2&check_in=2023-11-01&check_out=2023-11-04&source_impression_id=p3_1673115875_rSzzAA2pYWnK2PSE">
+                                Appartement 2 chambres Sablon Bruxelles centre ville
+                            </a>
+                        </p>
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/46464646/565962de_original.jpg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/2527721?adults=2&check_in=2023-11-01&check_out=2023-11-04&source_impression_id=p3_1673115997_YizjRNrSWyFfdZYf">
+                                City Center sunny & spacious 2 bedroom apartment
+                            </a>
+                        </p>
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-51857492/original/971a964d-94f2-4a09-a0d9-2970c449e3ee.jpeg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/51857492?adults=2&location=Bruxelles&check_in=2023-11-01&check_out=2023-11-04&federated_search_id=b20a9894-2cb3-4abb-aadb-44eddb3722ea&source_impression_id=p3_1673117878_tT09x1jKZAI3hYKX">
+                                R213 – Escapade chic à l'intérieur de la ville avec terrasse
+                            </a>
+                        </p>
+                        <p>
+                            <img src="https://a0.muscache.com/im/pictures/283bde08-c702-4d63-9aab-f47a41c98958.jpg?im_w=1200" class="thumb rounded d-block me-2">
+                            <a class="text-primary limitLink" target="_blank" href="https://www.airbnb.fr/rooms/6618409?adults=2&check_in=2023-11-01&check_out=2023-11-04&source_impression_id=p3_1673118080_k%2BJpTbaTcinTAESl">
+                                NEW Design appartement à Bruxelles
+                            </a>
+                        </p>
+                    </div>
                 </div>
+
+
             </div>
 
         </div>
